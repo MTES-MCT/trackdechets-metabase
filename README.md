@@ -29,3 +29,16 @@ Les commandes d'administration sont les suivantes: `sudo systemctl start|stop|re
 
 Configuration SSL effectuée via Certbot en suivant ce tutoriel: [how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04).
 Le renouvellement est automatique (Cf `systemctl list-timers`)
+
+### Pare-feu
+
+Activation d'un pare-feu ufw
+
+```
+sudo apt-get install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow ${SSH_PORT}
+sudo ufw allow 'Nginx Full'
+sudo ufw enable
+```
