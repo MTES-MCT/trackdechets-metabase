@@ -22,7 +22,7 @@ sudo docker-compose up -d
 
 ### Nginx
 
-Fichier de config dans `/etc/nginx/sites-available/metabase.trackdechets.beta.gouv.fr`.
+Fichier de config dans `/etc/nginx/sites-available/analytics.trackdechets.beta.gouv.fr`.
 Les commandes d'administration sont les suivantes: `sudo systemctl start|stop|restart|status nginx`
 
 ### SSL
