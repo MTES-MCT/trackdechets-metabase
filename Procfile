@@ -1,1 +1,1 @@
-metabase: java -jar /target/uberjar/metabase.jar
+web: java -jar /target/uberjar/metabase.jar
