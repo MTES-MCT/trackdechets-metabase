@@ -22,13 +22,16 @@ sudo docker-compose up -d
 
 ### Nginx
 
-Fichier de config dans `/etc/nginx/sites-available/analytics.trackdechets.beta.gouv.fr`.
-Les commandes d'administration sont les suivantes: `sudo systemctl start|stop|restart|status nginx`
+Nginx est également démarré à l'aide de docker-compose. Une authentification basique est ajoutée.
 
 ### SSL
 
 Configuration SSL effectuée via Certbot en suivant ce tutoriel: [how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04).
 Le renouvellement est automatique (Cf `systemctl list-timers`)
+
+### Logs
+
+Les logs sont transmis à Datadog à l'aide d'un agent conteneurisé.
 
 ### Pare-feu
 
