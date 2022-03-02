@@ -22,7 +22,9 @@ sudo docker-compose up -d
 
 ### Nginx
 
-Nginx est également démarré à l'aide de docker-compose. Une authentification basique est ajoutée.
+```
+sudo systemctl start nginx
+```
 
 ### SSL
 
