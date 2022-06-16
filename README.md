@@ -47,3 +47,8 @@ sudo ufw allow ${SSH_PORT}
 sudo ufw allow 'Nginx Full'
 sudo ufw enable
 ```
+
+### Connexions aux bases de données
+
+Pour des raisons de sécurité, la connexion aux db de prod se fait via un tunnel ssh et des utilisateurs readonly.
+Pour les db gérées par Scalingo, la gestion des droits d'accès aux schémas autres que public se fait en suivant [la documentation](https://doc.scalingo.com/databases/postgresql/start#database-users).
